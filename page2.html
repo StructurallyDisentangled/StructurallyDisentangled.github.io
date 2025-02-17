@@ -1,0 +1,1367 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Structurally Disentangled Feature Fields Distillation for 3D Understanding and Editing</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div class="container">
+        <a align="left" href="./index.html">Back</a>
+        <h1 align="center">Structurally Disentangled Feature Fields Distillation for 3D Understanding and Editing</h1>
+         
+        
+        <hr />
+        <hr />
+        
+        <h2 align="center"><a name="disentanglement" id="disentanglement"></a>More Results</h2>
+                
+        <hr />
+        <hr/>
+        <h2 align="left"><a name="disentanglement" id="disentanglement"></a>Segmentation</h2>
+        <p align="left">
+            Segmentation of 3D objects in scenes using our full approach in comaprison to baselines. 
+            Our approach is shown in the first row, DFF is shown in the second row, and DFF+RefNeRF is shown in the third row. 
+            The first 6 scenes are real world scenes from the real-world RefNeRF dataset and MipNeRF-360 dataset. 
+            The remaining scenes are synthetic scenes from the shiny blender dataset. The DFF and DFF+RefNeRF baselines mask the intended objects partially or include parts of other regions.
+			In contrast, our method produces a more accurate and complete segmentation of the desired region. </p>
+
+    <!-- Gardenspheres -->
+	<h3 align="left"><a name="disentanglement" id="disentanglement"></a>Gardenspheres</h3>
+	<table width="800" border="0" align="center">
+    <thead>
+        <tr>
+            <th align="center" style="writing-mode: vertical-rl; transform: rotate(180deg);"></th>
+            <th align="center">Novel Views - Gardenspheres</th>
+            <th align="center">Segmented - <b style="color:#37cc09;">Spheres</b></th>
+            <th align="center">Segmented - <b style="color:#1c24f6;">Head Statue</b></th>
+            <th align="center">Segmented - <b style="color:#ea2303;">Cone</b></th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Row 1 -->
+        <tr>
+            <td align="center" style="writing-mode: vertical-rl; transform: rotate(180deg);">Ours</td>
+            <td align="center">
+                <video width="200" controls autoplay muted playsinline loop>
+                    <source src="new_renders/ours/gardenspheres-raw.mp4" type="video/mp4">
+                </video>
+            </td>
+            <td align="center">
+                <video width="200" controls autoplay muted playsinline loop>
+                    <source src="new_renders/ours/gardenspheres-spheres_seg.mp4" type="video/mp4">
+                </video>
+            </td>
+            <td align="center">
+                <video width="200" controls autoplay muted playsinline loop>
+                    <source src="new_renders/ours/gardenspheres-head_seg.mp4" type="video/mp4">
+                </video>
+            </td>
+            <td align="center">
+                <video width="200" controls autoplay muted playsinline loop>
+                    <source src="new_renders/ours/gardenspheres-cone_seg.mp4" type="video/mp4">
+                </video>
+            </td>
+        </tr>
+
+        <!-- Row 2 -->
+        <tr>
+            <td align="center" style="writing-mode: vertical-rl; transform: rotate(180deg);">DFF</td>
+            <td align="center">
+                <video width="200" controls autoplay muted playsinline loop>
+                    <source src="new_renders/dff/gardenspheres-raw.mp4" type="video/mp4">
+                </video>
+            </td>
+            <td align="center">
+                <video width="200" controls autoplay muted playsinline loop>
+                    <source src="new_renders/dff/gardenspheres-spheres_seg.mp4" type="video/mp4">
+                </video>
+            </td>
+            <td align="center">
+                <video width="200" controls autoplay muted playsinline loop>
+                    <source src="new_renders/dff/gardenspheres-head_seg.mp4" type="video/mp4">
+                </video>
+            </td>
+            <td align="center">
+                <video width="200" controls autoplay muted playsinline loop>
+                    <source src="new_renders/dff/gardenspheres-cone_seg.mp4" type="video/mp4">
+                </video>
+            </td>
+        </tr>
+
+        <!-- Row 3 -->
+        <tr>
+            <td align="center" style="writing-mode: vertical-rl; transform: rotate(180deg);">DFF+RefNeRF</td>
+            <td align="center">
+                <video width="200" controls autoplay muted playsinline loop>
+                    <source src="new_renders/ours_dff/gardenspheres-raw.mp4" type="video/mp4">
+                </video>
+            </td>
+            <td align="center">
+                <video width="200" controls autoplay muted playsinline loop>
+                    <source src="new_renders/ours_dff/gardenspheres-spheres_seg.mp4" type="video/mp4">
+                </video>
+            </td>
+            <td align="center">
+                <video width="200" controls autoplay muted playsinline loop>
+                    <source src="new_renders/ours_dff/gardenspheres-head_seg.mp4" type="video/mp4">
+                </video>
+            </td>
+            <td align="center">
+                <video width="200" controls autoplay muted playsinline loop>
+                    <source src="new_renders/ours_dff/gardenspheres-cone_seg.mp4" type="video/mp4">
+                </video>
+			</td>
+		</tr>
+	</tbody>
+	</table>
+
+		<br>
+		<!-- Sedan -->  
+        <h3 align="left"><a name="disentanglement" id="disentanglement"></a>Sedan</h3>
+        <table width="200" border="0" align="center">
+            <tbody>
+                <tr>
+					<th align="center" style="writing-mode: vertical-rl; transform: rotate(180deg);"></th>
+                    <td align="center">Novel Views - Sedan
+                    <td></td>
+                    <td align="center">Segmented - <b><font color=#1c24f6>Bonnet Top</font></b>
+                    <td></td>
+                    <td align="center">Segmented - <b><font color=#ea2303>Wheels</font></b>
+                    <td></td>
+                    <td align="center">Segmented - <b><font color=#ff00ff>Hubcaps</font></b>
+                    <td></td>
+                    <td align="center">Segmented - <b><font color=#37cc09>Windshield</font></b>
+
+                </tr>
+                <tr>
+				<th align="center" style="writing-mode: vertical-rl; transform: rotate(180deg);">Ours</th>
+                <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/ours/sedan-raw.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/ours/sedan-bonet_top_seg.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/ours/sedan-wheel_seg.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/ours/sedan-hubcaps_seg.mp4" type="video/mp4" />
+                        </video></td>
+                         <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/ours/sedan-windshield_seg.mp4" type="video/mp4" />
+                        </video></td>
+
+                </tr>
+                
+                
+                 <tr>
+				 <th align="center" style="writing-mode: vertical-rl; transform: rotate(180deg);">DFF</th>
+                 <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/dff/sedan-raw.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/dff/sedan-bonet_top_seg.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/dff/sedan-wheel_seg.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/dff/sedan-hubcaps_seg.mp4" type="video/mp4" />
+                        </video></td>
+                         <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/dff/sedan-windshield_seg.mp4" type="video/mp4" />
+                        </video></td>
+
+                </tr>
+                
+                
+                <tr>
+				<td align="center" style="writing-mode: vertical-rl; transform: rotate(180deg);">DFF+RefNeRF</td>
+                <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/ours_dff/sedan-raw.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/ours_dff/sedan-bonet_top_seg.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/ours_dff/sedan-wheel_seg.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/ours_dff/sedan-hubcaps_seg.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/ours_dff/sedan-windshield_seg.mp4" type="video/mp4" />
+                        </video></td>
+                </tr>
+                
+
+                
+            </tbody>
+        </table>
+        
+		<br>
+        <h3 align="left"><a name="disentanglement" id="disentanglement"></a>Toycar</h3>
+        <table width="200" border="0" align="center">
+            <tbody>
+                <tr>
+				<td align="center" style="writing-mode: vertical-rl; transform: rotate(180deg);"></td>
+                    <td align="center">Novel Views - Toycar
+                    <td></td>
+                    <td align="center">Segmented - <b><font color=#ea2303>Body</font></b>
+                    <td></td>
+                    <td align="center">Segmented - <b><font color=#1c24f6>Wheels</font></b>
+                    
+
+                </tr>
+                <tr>
+				<td align="center" style="writing-mode: vertical-rl; transform: rotate(180deg);">Ours</td>
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/ours/toycar-raw.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/ours/toycar-body_seg.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/ours/toycar-wheel_seg.mp4" type="video/mp4" />
+                        </video></td>
+                    
+                </tr>
+                
+                
+                <tr>
+				<td align="center" style="writing-mode: vertical-rl; transform: rotate(180deg);">DFF</td>
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/dff/toycar-raw.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/dff/toycar-body_seg.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/dff/toycar-wheel_seg.mp4" type="video/mp4" />
+                        </video></td>
+                    
+                </tr>
+                
+                
+                 <tr>
+				 <td align="center" style="writing-mode: vertical-rl; transform: rotate(180deg);">DFF+RefNeRF</td>
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/ours_dff/toycar-raw.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/ours_dff/toycar-body_seg.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/ours_dff/toycar-wheel_seg.mp4" type="video/mp4" />
+                        </video></td>
+                    
+                </tr>
+
+                </tr>
+            </tbody>
+        </table>
+
+        <br>
+		<h3 align="left"><a name="disentanglement" id="disentanglement"></a>Bicycle</h3>
+        <table width="200" border="0" align="center">
+            <tbody>
+                <tr>
+					<td align="center" style="writing-mode: vertical-rl; transform: rotate(180deg);"></td>
+                    <td align="center">Novel Views - Bicycle
+                    <td></td>
+                    <td align="center">Segmented - <b><font color=#1c24f6>Wheels</font></b>
+                    <td></td>
+                    <td align="center">Segmented - <b><font color=#ea2303>Bench</font></b>
+           
+
+                </tr>
+                <tr>
+					<td align="center" style="writing-mode: vertical-rl; transform: rotate(180deg);">Ours</td>
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/ours/bicycle-raw.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/ours/bicycle-bicycle_wheels.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/ours/bicycle-chair.mp4" type="video/mp4" />
+                        </video></td>
+
+                </tr>
+                    <tr>
+					<td align="center" style="writing-mode: vertical-rl; transform: rotate(180deg);">DFF</td>
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/dff/bicycle-raw.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/dff/bicycle-bicycle_wheels_seg.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/dff/bicycle-chair_seg.mp4" type="video/mp4" />
+                        </video></td>
+
+                </tr>
+                    <tr>
+					<td align="center" style="writing-mode: vertical-rl; transform: rotate(180deg);">DFF+RefNeRF</td>
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/ours_dff/bicycle-raw.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/ours_dff/bicycle-bicycle_wheels_seg.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/ours_dff/bicycle-chair_seg.mp4" type="video/mp4" />
+                        </video></td>
+
+                </tr>
+
+
+                </tr>
+            </tbody>
+        </table>
+
+        <br>
+		<h3 align="left"><a name="disentanglement" id="disentanglement"></a>Garden</h3>
+        <table width="200" border="0" align="center">
+            <tbody>
+                <tr>
+					<td align="center" style="writing-mode: vertical-rl; transform: rotate(180deg);"></td>
+                    <td align="center">Novel Views - Garden
+                    <td></td>
+                    <td align="center">Segmented - <b><font color=#37cc09>Plant</font></b>
+                    <td></td>
+                    <td align="center">Segmented - <b><font color=#ea2303>Table top</font></b>
+                    <td></td>
+                    <td align="center">Segmented - <b><font color=#1c24f6>Ball</font></b>
+
+                </tr>
+                <tr>
+				<td align="center" style="writing-mode: vertical-rl; transform: rotate(180deg);">Ours</td>
+                <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/ours/garden-raw.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/ours/garden-plant.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/ours/garden-tabletop.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/ours/garden-ball.mp4" type="video/mp4" />
+                        </video></td>
+
+                </tr>
+
+                <tr>
+				<td align="center" style="writing-mode: vertical-rl; transform: rotate(180deg);">DFF</td>
+                <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/dff/garden-raw.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/dff/garden-plant_seg.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/dff/garden-tabletop_seg.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/dff/garden-ball_seg.mp4" type="video/mp4" />
+                        </video></td>
+
+                </tr>
+
+               <tr>
+			   <td align="center" style="writing-mode: vertical-rl; transform: rotate(180deg);">DFF+RefNeRF</td>
+                <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/ours_dff/garden-raw.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/ours_dff/garden-plant_seg.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/ours_dff/garden-tabletop_seg.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/ours_dff/garden-ball_seg.mp4" type="video/mp4" />
+                        </video></td>
+
+                </tr>
+
+            </tbody>
+        </table>
+        
+		<br>
+        <h3 align="left"><a name="disentanglement" id="disentanglement"></a>Kitchen</h3>
+        <table width="200" border="0" align="center">
+            <tbody>
+                <tr>
+				<td align="center" style="writing-mode: vertical-rl; transform: rotate(180deg);"></td>
+                    <td align="center">Novel Views - Kitchen
+                    <td></td>
+                    <td align="center">Segmented - <b><font color=#1c24f6>Lego Tractor</font></b>
+                    <td></td>
+                    
+                </tr>
+                <tr>
+				<td align="center" style="writing-mode: vertical-rl; transform: rotate(180deg);">Ours</td>
+                                <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/ours/kitchen-raw.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/ours/kitchen-lego.mp4" type="video/mp4" />
+                        </video></td>
+
+
+                </tr>
+                
+                                <tr>
+								<td align="center" style="writing-mode: vertical-rl; transform: rotate(180deg);">DFF</td>
+                                <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/dff/kitchen-raw.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/dff/kitchen-lego_seg.mp4" type="video/mp4" />
+                        </video></td>
+
+				<tr>
+				<td align="center" style="writing-mode: vertical-rl; transform: rotate(180deg);">DFF+RefNeRF</td>
+                                <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/ours_dff/kitchen-raw.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/ours_dff/kitchen-lego_seg.mp4" type="video/mp4" />
+                        </video></td>
+
+                </tr>
+
+                </tr>
+            </tbody>
+        </table>
+        <p></p>
+
+		<br>
+        <h3 align="left"><a name="disentanglement" id="disentanglement"></a>Counter</h3>
+        <table width="200" border="0" align="center">
+            <tbody>
+                <tr>
+				<td align="center" style="writing-mode: vertical-rl; transform: rotate(180deg);"></td>
+                    <td align="center">Novel Views - Counter
+                    <td></td>
+                    <td align="center">Segmented - <b><font color=#ea2303>Mittens</font></b>
+                    <td></td>
+                    <td align="center">Segmented - <b><font color=#1c24f6>Tray</font></b>
+                    <td></td>
+                    <td align="center">Segmented - <b><font color=#37cc09>Plant</font></b>
+
+                </tr>
+                <tr>
+				<td align="center" style="writing-mode: vertical-rl; transform: rotate(180deg);">Ours</td>
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/ours/counter-raw.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/ours/counter-mittens.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/ours/counter-tray.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/ours/counter-plant.mp4" type="video/mp4" />
+                        </video></td>
+
+                </tr>
+                
+                    <tr>
+					<td align="center" style="writing-mode: vertical-rl; transform: rotate(180deg);">DFF</td>
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/dff/counter-raw.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/dff/counter-mittens_seg.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/dff/counter-tray_seg.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/dff/counter-plant_seg.mp4" type="video/mp4" />
+                        </video></td>
+
+                </tr>
+
+
+                    <tr>
+					<td align="center" style="writing-mode: vertical-rl; transform: rotate(180deg);">DFF+RefNeRF</td>
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/ours/counter-raw.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/ours_dff/counter-mittens_seg.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/ours_dff/counter-tray_seg.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/ours_dff/counter-plant_seg.mp4" type="video/mp4" />
+                        </video></td>
+
+                </tr>
+
+ 
+            </tbody>
+        </table>
+
+        <br>
+		<h3 align="left"><a name="disentanglement" id="disentanglement"></a>Car</h3>
+        <table width="200" border="0" align="center">
+            <tbody>
+                <tr>
+					<td align="center" style="writing-mode: vertical-rl; transform: rotate(180deg);"></td>
+                    <td align="center">Novel Views - Car
+                    <td></td>
+                    <td align="center">Segmented - <b><font color=#37cc09>Wheels</font></b>
+                    <td></td>
+                    <td align="center">Segmented - <b><font color=#ea2303>Windshield</font></b>
+           
+                </tr>
+                <tr>
+				<td align="center" style="writing-mode: vertical-rl; transform: rotate(180deg);">Ours</td>
+                                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="mp4\seg\blenders\ours\car.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="mp4\seg\blenders\ours\car_wheel.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="mp4\seg\blenders\ours\car_windshield.mp4" type="video/mp4" />
+                        </video></td>
+
+                </tr>
+                
+                                <tr>
+								<td align="center" style="writing-mode: vertical-rl; transform: rotate(180deg);">DFF</td>
+                                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="mp4\seg\blenders\dff\car.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="mp4\seg\blenders\dff\car_wheel.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="mp4\seg\blenders\dff\car_windshield.mp4" type="video/mp4" />
+                        </video></td>
+
+                </tr>
+                
+                
+                                <tr>
+								<td align="center" style="writing-mode: vertical-rl; transform: rotate(180deg);">DFF+RefNeRF</td>
+                                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="mp4\seg\blenders\ours_no_dep\car_hl.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="mp4\seg\blenders\ours_no_dep\car_wheel.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="mp4\seg\blenders\ours_no_dep\car_windshield.mp4" type="video/mp4" />
+                        </video></td>
+
+                </tr>
+
+            </tbody>
+        </table>
+        <p></p>
+
+        <br>
+		<h3 align="left"><a name="disentanglement" id="disentanglement"></a>Helmet</h3>
+        <table width="200" border="0" align="center">
+            <tbody>
+                <tr>
+				<td align="center" style="writing-mode: vertical-rl; transform: rotate(180deg);"></td>
+                    <td align="center">Novel Views - Helmet
+                    <td></td>
+                    <td align="center">Segmented - <b><font color=#37cc09>Windshield</font></b>
+                    <td></td>
+                    <td align="center">Segmented - <b><font color=#ea2303>Body</font></b>
+           
+
+                </tr>
+                <tr>
+				<td align="center" style="writing-mode: vertical-rl; transform: rotate(180deg);">Ours</td>
+                <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="mp4\seg\blenders\ours\helmet.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="mp4\seg\blenders\ours\helmet_windshield.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="mp4\seg\blenders\ours\helmet_body.mp4" type="video/mp4" />
+                        </video></td>
+
+                </tr>
+                <tr>
+				<td align="center" style="writing-mode: vertical-rl; transform: rotate(180deg);">DFF</td>
+                <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="mp4\seg\blenders\dff\helmet.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="mp4\seg\blenders\dff\helmet_windshield.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="mp4\seg\blenders\dff\helmet_body.mp4" type="video/mp4" />
+                        </video></td>
+
+                </tr>
+                
+                <tr>
+				<td align="center" style="writing-mode: vertical-rl; transform: rotate(180deg);">DFF+RefNeRF</td>
+                <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="mp4\seg\blenders\ours\helmet.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="mp4\seg\blenders\ours_no_dep\helmet_windshield.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="mp4\seg\blenders\ours_no_dep\helmetbody.mp4" type="video/mp4" />
+                        </video></td>
+
+                </tr>
+
+                </tr>
+            </tbody>
+        </table>
+        <p></p>
+
+        <br>
+		<h3 align="left"><a name="disentanglement" id="disentanglement"></a>Toaster</h3>
+        <table width="200" border="0" align="center">
+            <tbody>
+                <tr>
+				<td align="center" style="writing-mode: vertical-rl; transform: rotate(180deg);"></td>
+                    <td align="center">Novel Views - Toaster</td>
+                    <td></td>
+                    <td align="center">Segmented - <b><font color=#ea2303>Body</font></b> </td>
+                    <td></td>
+                    <td align="center">Segmented - <b><font color=#37cc09>Toasts</font></b></td>
+           
+
+                </tr>
+                <tr>
+                <td align="center" style="writing-mode: vertical-rl; transform: rotate(180deg);">Ours</td>
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="mp4\seg\blenders\ours\toaster.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="mp4\seg\blenders\ours\toaster_body.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="mp4\seg\blenders\ours\toasts.mp4" type="video/mp4" />
+                        </video></td>
+
+                </tr>
+
+
+                <tr>
+                <td align="center" style="writing-mode: vertical-rl; transform: rotate(180deg);">DFF</td>
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="mp4\seg\blenders\dff\toaster.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="mp4\seg\blenders\dff\toaster_body.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="mp4\seg\blenders\dff\toasts.mp4" type="video/mp4" />
+                        </video></td>
+
+                </tr>
+
+
+                <tr>
+                <td align="center" style="writing-mode: vertical-rl; transform: rotate(180deg);">DFF+RefNeRF</td>
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="mp4\seg\blenders\ours_no_dep\toaster_hl.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="mp4\seg\blenders\ours_no_dep\toaster_body.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="mp4\seg\blenders\ours_no_dep\toasts.mp4" type="video/mp4" />
+                        </video></td>
+
+                </tr>
+                </tr>
+            </tbody>
+        </table>
+        <p></p>
+
+        <br>
+		<h3 align="left"><a name="disentanglement" id="disentanglement"></a>Teapot</h3>
+        <table width="200" border="0" align="center">
+            <tbody>
+                <tr>
+				<td align="center" style="writing-mode: vertical-rl; transform: rotate(180deg);"></td>
+                    <td align="center">Novel Views - Teapot
+                    <td></td>
+                    <td align="center">Segmented - <b><font color=#37cc09>Cover</font></b>
+        
+                </tr>
+                <tr>
+				<td align="center" style="writing-mode: vertical-rl; transform: rotate(180deg);">Ours</td>
+                <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="mp4\seg\blenders\ours\teapot.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="mp4\seg\blenders\ours\teapot_cover.mp4" type="video/mp4" />
+                        </video></td>
+
+                </tr>
+
+
+                <tr>
+				<td align="center" style="writing-mode: vertical-rl; transform: rotate(180deg);">DFF</td>
+                <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="mp4\seg\blenders\dff\teapot.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="mp4\seg\blenders\dff\teapot_cover.mp4" type="video/mp4" />
+                        </video></td>
+
+                </tr>
+                
+                
+                <tr>
+				<td align="center" style="writing-mode: vertical-rl; transform: rotate(180deg);">DFF+RefNeRF</td>
+                <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="mp4\seg\blenders\ours\teapot.mp4" type="video/mp4" />
+                        </video></td>
+                    <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="mp4\seg\blenders\ours_no_dep\teapot_cover.mp4" type="video/mp4" />
+                        </video></td>
+
+                </tr>
+
+                </tr>
+            </tbody>
+        </table>
+        
+
+		<br>
+        <hr />
+        <h2 align="left"><a name="disentanglement" id="disentanglement"></a>View Dependent Segmentation</h2>
+ 
+        <h3 align="left"><a name="disentanglement" id="disentanglement"></a>Gardenspheres</h3>
+        <table width="200" border="0" align="center">
+            <tbody>
+                <tr>
+                <td align="center">Novel Views - Gardenspheres
+                    <td></td>
+                    <td align="center">Segmented - <b><font color=#37cc09>Spheres Highlight</font></b>
+
+                </tr>
+                                <tr>
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/ours/gardenspheres-raw.mp4" type="video/mp4" />
+                        </video></td>
+                <td align="center"><video width="10">
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/ours/gardenspheres-hl_seg.mp4" type="video/mp4" />
+                        </video></td>
+                </tr>
+
+                </tr>
+            </tbody>
+        </table>
+
+
+
+
+        <h3 align="left"><a name="disentanglement" id="disentanglement"></a>Sedan </h3>
+        <table width="200" border="0" align="center">
+            <tbody>
+                <tr>
+                    <td align="center">Segmented - <b><font color=#34ebe1>Windshield Highlight</font></b>
+                    
+                </tr>
+                <tr>
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/ours/sedan-hl_seg.mp4" type="video/mp4" />
+                        </video></td>
+                    
+                </tr>
+
+                </tr>
+            </tbody>
+        </table>
+
+        <h3 align="left"><a name="disentanglement" id="disentanglement"></a>Car</h3>
+        <table width="200" border="0" align="center">
+            <tbody>
+                <tr>
+
+                    
+                    <td align="center">Segmented - <b><font color=#37cc09>Car Highlight</font></b></td>
+
+                </tr>
+                <tr>
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="segmentation\car\car_seg_hl1.mp4" type="video/mp4" />
+                        </video></td>
+                        
+                </tr>
+
+                </tr>
+            </tbody>
+        </table>        
+
+        <h3 align="left"><a name="disentanglement" id="disentanglement"></a>Helmet</h3>
+        <table width="200" border="0" align="center">
+            <tbody>
+                <tr>
+                    <td align="center">Segmented - <b><font color=#37cc09>Body Highlight</font></b>
+
+                </tr>
+                <tr>
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="mp4\seg\blenders\ours\helmet_hl.mp4" type="video/mp4" />
+                        </video></td>
+                </tr>
+
+                </tr>
+            </tbody>
+        </table> 
+
+
+        <hr />
+        <h2 align="left"><a name="disentanglement" id="disentanglement"></a>Removal and Editing</h2>
+
+        <p>The following are additional novel views for different removal and editing capabilites.  
+            We also provide additional illustrations beyond those provided in the manuscript for additional scenes. 
+            </p>
+        
+        <br> </br>
+        
+        <h3 align="left"><a name="disentanglement" id="disentanglement"></a>Gardenspheres (Color Editing of Spheres)</h3>
+        <table width="200" border="0" align="center">
+            <tbody>
+                <tr>
+                                        
+                    <td align="center">Full Color Edit - <b><font color=#00aaaa>Spheres</font></b> </td>
+                    <!-- <td></td> -->
+                    <td align="center">Independent Color Edit 1 - <b><font color=#00aaaa>Spheres</font></b></td>
+                    <td align="center">Independent Color Edit 2 - <b><font color=#9aba73>Spheres</font></b></td>
+                    <td align="center">Independent Color Edit 3 - <b><font color=#a373ba>Spheres</font></b></td>
+           
+                    
+                </tr>
+                <tr>
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/ours/gardenspheres-spheres_color_full.mp4" type="video/mp4" />
+                    </video></td>
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                        <source src="new_renders/ours/gardenspheres-spheres_color.mp4" type="video/mp4" />
+                    </video></td>
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                        <source src="new_renders/ours/gardenspheres-spheres_color2.mp4" type="video/mp4" />
+                    </video></td>
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                        <source src="new_renders/ours/gardenspheres-spheres_color3.mp4" type="video/mp4" />
+                    </video></td>
+                </tr>
+
+                </tr>
+            </tbody>
+        </table>
+        <br />
+
+        <h3 align="left"><a name="disentanglement" id="disentanglement"></a>Garden (Color Editing of Plant and Tabletop)</h3>
+        <table width="200" border="0" align="center">
+            <tbody>
+                <tr>
+                                        
+                    <td align="center">Color Edit - <b><font color=#8ad49a>Plant</font></b> </td>
+                    <td align="center">Color Edit 2 - <b><font color=#b8ba73>Plant</font></b> </td>
+                    <td align="center">Color Edit - <b><font color=#ba9f73>Tabletop</font></b></td>
+                    <td align="center">Color Edit 2 - <b><font color=#b073ba>Tabletop</font></b></td>
+           
+                    
+                </tr>
+                <tr>
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/ours/garden-plant_color.mp4" type="video/mp4" />
+                    </video></td>
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                        <source src="new_renders/ours/garden-plant_color2.mp4" type="video/mp4" />
+                </video></td>
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                    <source src="new_renders/ours/garden-tabletop_color.mp4" type="video/mp4" />
+                    </video></td>
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                        <source src="new_renders/ours/garden-tabletop_color2.mp4" type="video/mp4" />
+                        </video></td>
+                </tr>
+
+                </tr>
+            </tbody>
+        </table>
+
+        <h3 align="left"><a name="disentanglement" id="disentanglement"></a>Toaster (Color Editing of Toaster Body or Toast)</h3>
+
+        <table width="200" border="0" align="center">
+            <tbody>
+      
+           
+                <tr>
+
+<td align="center">Novel Views</td>  
+                    <td></td>
+                    <td align="center">Edit the entire color component of body </td>  
+                    <td></td>
+
+                    <td align="center">Edit independent color component of body</td>  
+                    <td></td>
+                    <td align="center">Edit the entire color component of toast </td>  
+                    <td></td>
+
+                    <td align="center">Edit independent color component of toast</td>
+                
+                </tr>
+                <tr>
+                <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                        <source src="mp4\seg\blenders\ours\toaster.mp4" type="video/mp4" />
+                    </video></td>
+                    <td align="center"><video width="10">
+
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                        <source src="mp4\edit\toaster_body.mp4" type="video/mp4" />
+                    </video></td>
+                    <td align="center"><video width="10">
+
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                        <source src="mp4\edit\toaster_body2.mp4" type="video/mp4" />
+                    </video></td>
+                    
+                                <td align="center"><video width="10">
+            <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                <source src="editing\toaster\bread_color_all.mp4" type="video/mp4" />
+            </video></td>     
+            
+                        <td align="center"><video width="10">
+            <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                <source src="editing\toaster\bread_color.mp4" type="video/mp4" />
+            </video></td>     
+                    
+                </tr>
+
+                </tr>
+            </tbody>
+        </table>
+        <p></p>
+        
+        <h3 align="left"><a name="disentanglement" id="disentanglement"></a>Sedan (Color Editing of Sedan Wheel or Windshield)</h3>
+        
+            <table width="200" border="0" align="center">
+        <tbody>
+                <tr>
+            <td align="center">Red Wheel Steel</td>
+            <td></td>
+            <td align="center">Yellow Windshield</td>
+            
+        </tr>
+        <tr>
+            <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                <source src="new_renders/ours/sedan-hubcaps_color.mp4" type="video/mp4" />
+            </video></td>
+            <td align="center"><video width="10">
+            <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                <source src="new_renders/ours/sedan-windshield_color.mp4" type="video/mp4" />
+            </video></td>
+            
+        </tr>
+
+        </tr>
+        </tbody>
+        </table>  
+        <p></p>
+        
+        <h3 align="left"><a name="disentanglement" id="disentanglement"></a>Car (Color Editing of Car's Body or Wheels)</h3>
+ 
+        <table width="200" border="0" align="center">
+       
+        
+            <tbody>
+                    <tr>
+                <td align="center">Blue Wheels (Using independent component) </td>
+                <td></td>
+                <td align="center">Blue Wheels (Using entire color component)</td>
+                
+            </tr>
+            <tr>
+                <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                    <source src="editing\car\wheel_color.mp4" type="video/mp4" />
+                </video></td>
+                <td align="center"><video width="10">
+                <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                    <source src="editing\car\wheel_color_all.mp4" type="video/mp4" />
+                </video></td>
+                
+    
+            </tr>
+    
+            </tr>
+            </tbody>
+        </table>
+    
+        <table width="200" border="0" align="center">
+            
+            <tbody>
+                    <tr>
+                <td align="center">Purple Body (Using independent component)</td>
+                <td></td>
+                <td align="center">Purple Body (Using entire color component)</td>
+                
+            </tr>
+            <tr>
+                <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                    <source src="editing\car\body_color.mp4" type="video/mp4" />
+                </video></td>
+                <td align="center"><video width="10">
+                <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                    <source src="editing\car\body_color_all.mp4" type="video/mp4" />
+                </video></td>
+                
+    
+            </tr>
+    
+            </tr>
+            </tbody>
+        </table>
+        <br/>
+        <h3 align="left"><a name="disentanglement" id="disentanglement"></a>Gardenspheres (Rougher Spheres)</h3>
+        
+        <table width="200" border="0" align="center">
+            <tbody>
+                <tr>
+            <td align="center">Purple Body (Using independent component)</td>
+            
+        </tr>
+        <tr>
+            <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                <source src="new_renders/ours/gardenspheres-spheres_roughness.mp4" type="video/mp4" />
+            </video></td>
+                        
+        </tr>
+
+        </tr>
+        </tbody>
+        </table>
+    </br>
+
+    <h3 align="left"><a name="disentanglement" id="disentanglement"></a>Helmet (Rougher Body)</h3>
+
+    <table width="200" border="0" align="center">
+
+        <tbody>
+        
+                        <tr>
+
+            <td align="center">Novel Views</td>  
+                
+                <td align="center">Rougher Body</td>  
+               
+            
+            </tr>
+           
+            <tr>
+                
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                        <source src="mp4\seg\blenders\ours\helmet.mp4" type="video/mp4" />
+                    </video></td>
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="mp4\edit\helmet_roughness.mp4" type="video/mp4" />
+                        </video></td>
+                    <!-- <td align="center"><video width="10">                        -->
+            </tr>
+         
+
+            </tr>
+        </tbody>
+    </table>
+
+
+<h3 align="left"><a name="disentanglement" id="disentanglement"></a>Toaster (Rougher Body)</h3>
+
+<table width="200" border="0" align="center">
+
+
+    <tbody>
+        <tr>            
+        <td align="center">Shiny Toasts</td>
+        <td></td>
+        <td align="center">Rougher Toaster Body</td>
+    </tr>
+    <tr>            
+        <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+            <source src="editing\toaster\bread_shiny.mp4" type="video/mp4" />
+        </video></td>
+        <td align="center"><video width="10">
+        <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+            <source src="editing\toaster\body_roughness.mp4" type="video/mp4" />
+        </video></td>
+
+    </tr>
+
+    </tr>
+    </tbody>
+</table>  
+
+<h3 align="left"><a name="disentanglement" id="disentanglement"></a>Car (Rougher Body or Shiny Wheels)</h3>
+
+<table width="200" border="0" align="center">       
+    
+    <tbody>
+            <tr>            
+        <td align="center">Shiny Wheels</td>
+        <td></td>
+        <td align="center">Rougher Body</td>
+    </tr>
+    <tr>            
+        <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+            <source src="editing\car\wheel_shiny.mp4" type="video/mp4" />
+        </video></td>
+        <td align="center"><video width="10">
+        <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+            <source src="editing\car\body_roughness.mp4" type="video/mp4" />
+        </video></td>
+
+    </tr>
+
+    </tr>
+    </tbody>
+</table> 
+<br/>
+<h3 align="left"><a name="disentanglement" id="disentanglement"></a>Removal Of Reflective Component of Tabletop</h3>
+        <table width="200" border="0" align="center">
+            <tbody>
+                <tr>
+                                        
+                    <td align="center">Remove Garden Tabletop Reflection</td>
+                    <td align="center">Remove Sedan Bonet+Top Reflection</td>
+                    <td align="center">Remove Gardenspheres Spheres Reflection</td>
+           
+                    
+                </tr>
+                <tr>
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                            <source src="new_renders/ours/garden-tabletop_rm_hl.mp4" type="video/mp4" />
+                    </video></td>
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                        <source src="new_renders/ours/sedan-body_rm_hl.mp4" type="video/mp4" />
+                </video></td>
+                    <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                    <source src="new_renders/ours/gardenspheres-spheres_rm_hl.mp4" type="video/mp4" />
+                    </video></td>
+                 
+                </tr>
+
+                </tr>
+            </tbody>
+        </table>
+
+
+
+            
+    <h3 align="left"><a name="disentanglement" id="disentanglement"></a>Ground Truth Segmentation Masks</h3>
+    <table width="200" border="0" align="center">
+    
+                    <p align="left">
+We provide here illustration of ground truth segmentation masks used for the computation of the IoU. These were obtained using Segment Anything and manully refined. 
+         </p>
+    
+        <tbody>
+                <tr>
+            <td align="center">Garden-spheres view 1</td>
+            <td></td>
+            <td align="center">Garden-spheres view 2</td>
+            <td></td>
+            <td align="center">Sedan view 1</td>
+                        <td></td>
+            <td align="center">Sedan view 2</td>                        
+        </tr>
+        <tr>
+            <td align="center">
+            <img width="200" src="segmentation\ground_truth\gardenspheres\imgs\006.png" alt="Italian Trulli">
+            </td>
+            <td></td>
+            <td align="center">
+            <img width="200" src="segmentation\ground_truth\gardenspheres\imgs\013.png" alt="Italian Trulli">
+            </td>
+            <td></td>
+            
+                        <td align="center">
+            <img width="200" src="segmentation\ground_truth\sedan\imgs\008.png" alt="Italian Trulli">
+            </td>
+            <td></td>
+            <td align="center">
+            <img width="200" src="segmentation\ground_truth\sedan\imgs\019.png" alt="Italian Trulli">
+            </td>
+            <td></td>
+            
+                    </tr>
+                    
+                  <tr>
+            <td align="center">
+            <img width="200" src="segmentation\ground_truth\gardenspheres\masks\006.png" alt="Italian Trulli">
+            </td>
+            <td></td>
+            <td align="center">
+            <img width="200" src="segmentation\ground_truth\gardenspheres\masks\013.png" alt="Italian Trulli">
+            </td>
+            <td></td>
+            
+                        <td align="center">
+            <img width="200" src="segmentation\ground_truth\sedan\masks\8.png" alt="Italian Trulli">
+            </td>
+            <td></td>
+            <td align="center">
+            <img width="200" src="segmentation\ground_truth\sedan\masks\19.png" alt="Italian Trulli">
+            </td>
+            <td></td>
+            
+                    </tr>
+                    
+                    
+                    
+         
+         
+         
+         
+                 <tbody>
+                <tr>
+            <td align="center">Car view 1</td>
+            <td></td>
+            <td align="center">Car view 2</td>
+            <td></td>
+            <td align="center">Toaster view 1</td>
+                        <td></td>
+            <td align="center">Toaster view 2</td>                        
+        </tr>
+        <tr>
+            <td align="center">
+            <img width="200" src="segmentation\ground_truth\car\imgs\r_26.png" alt="Italian Trulli">
+            </td>
+            <td></td>
+            <td align="center">
+            <img width="200" src="segmentation\ground_truth\car\imgs\r_86.png" alt="Italian Trulli">
+            </td>
+            <td></td>
+            
+                        <td align="center">
+            <img width="200" src="segmentation\ground_truth\toaster\imgs\r_9.png" alt="Italian Trulli">
+            </td>
+            <td></td>
+            <td align="center">
+            <img width="200" src="segmentation\ground_truth\toaster\imgs\r_51.png" alt="Italian Trulli">
+            </td>
+            <td></td>
+            
+                    </tr>
+                    
+                  <tr>
+            <td align="center">
+            <img width="200" src="segmentation\ground_truth\car\masks\r_26.png" alt="Italian Trulli">
+            </td>
+            <td></td>
+            <td align="center">
+            <img width="200" src="segmentation\ground_truth\car\masks\r_86.png" alt="Italian Trulli">
+            </td>
+            <td></td>
+            
+                        <td align="center">
+            <img width="200" src="segmentation\ground_truth\toaster\masks\r_9.png" alt="Italian Trulli">
+            </td>
+            <td></td>
+            <td align="center">
+            <img width="200" src="segmentation\ground_truth\toaster\masks\r_51.png" alt="Italian Trulli">
+            </td>
+            <td></td>
+            
+                    </tr>
+   
+                    
+         </video></td>            
+            
+        </tr>
+
+        </tr>
+        </tbody>
+    </table> 
+
+    </div>
+</body>
